@@ -1,6 +1,7 @@
+default:
+  secretkey: ${JWT_SECRET:d1bee9cccfc6b1903477e580e121a84c9df6e329e7657e2025ac3fbc7c7d3f22}
 server:
   port: 9080
-
 spring:
   application:
     name: Api-Necropolis

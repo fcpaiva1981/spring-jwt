@@ -33,6 +33,14 @@ public class UsuariosEntity implements Serializable, UserDetails {
     private boolean credentialsNonExpired;
     private boolean enabled;
 
+    public UsuariosEntity() {
+    }
+
+    public UsuariosEntity(String username, String password, UsuariosRolesEnum role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if(this.role == UsuariosRolesEnum.ADMIN) {

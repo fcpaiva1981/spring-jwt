@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "5617ad0f-adbf-4ffd-bef9-7f1f453e78b2",
+		"name": "JavaSpringJwtSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1670261"
+	},
+	"item": [
+		{
+			"name": "{{base_url}}/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"fcpaiva1981@gmail.com\",\n  \"password\": \"q1w2e3r4t5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/check-api-online/verificar-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/check-api-online/verificar-api",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"check-api-online",
+						"verificar-api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/product/lista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImZjcGFpdmExOTgxQGdtYWlsLmNvbSIsImV4cCI6MTcyMDcyMDIzNn0.Z-j5n_PBiOCy4IvuMH0g_GCyvvuYsZs92iG1aU1vp08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/product/lista",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"product",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/auth/registrar-usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImZjcGFpdmExOTgxQGdtYWlsLmNvbSIsImV4cCI6MTcyMDcyMDIzNn0.Z-j5n_PBiOCy4IvuMH0g_GCyvvuYsZs92iG1aU1vp08",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"fcpaiva1981\",\n  \"password\": \"q1w2e3r4t5\",\n  \"role\": \"USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/registrar-usuario",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"registrar-usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
